@@ -11,18 +11,18 @@ class CardViewModel @Inject constructor(): ViewModel(){
 
     val tareas = mutableStateListOf<Tareas>()
 
-    init{
-        tareas.addAll(
-            listOf(
-                Tareas(0,"Actividad 1","12/11/25","Alta", "Realizar varios..."),
-                Tareas(1,"Actividad 2", "12/11/25","Baja","Realizar varios..."),
-                Tareas(2,"Actividad","12/11/25", "Alta","Realizar varios..."),
-                Tareas(3,"Actividad", "12/11/25", "Media","Realizar varios..."),
-                Tareas(4,"Actividad", "12/11/25","Alta","Realizar varios..."),
-                Tareas(5,"Actividad", "12/11/25", "Media","Realizar varios...")
-            )
-        )
-    }
+//    init{
+//        tareas.addAll(
+//            listOf(
+//                Tareas(0,"Actividad 1","12/11/25","Alta", "Realizar varios..."),
+//                Tareas(1,"Actividad 2", "12/11/25","Baja","Realizar varios..."),
+//                Tareas(2,"Actividad","12/11/25", "Alta","Realizar varios..."),
+//                Tareas(3,"Actividad", "12/11/25", "Media","Realizar varios..."),
+//                Tareas(4,"Actividad", "12/11/25","Alta","Realizar varios..."),
+//                Tareas(5,"Actividad", "12/11/25", "Media","Realizar varios...")
+//            )
+//        )
+//    }
 
     //Se encarga de agregar la nueva tarea a la lista mutable
     fun addTarea(Tarea: Tareas){

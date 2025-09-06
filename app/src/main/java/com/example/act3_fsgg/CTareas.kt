@@ -215,13 +215,19 @@ fun CTareas(navController: NavController, viewModel: CardViewModel) {
                                     descripcion = ""
                                     navController.navigate("Pantalla1")
                                 } else {
-                                    Toast.makeText(context, "En Prioridad solo puede ser Alta/Media/Baja", Toast.LENGTH_SHORT).show()
+                                    Toast.makeText(context, "Formato incorrecto en Prioridad", Toast.LENGTH_SHORT).show()
+                                    if (prioridad.isNotEmpty()) prioridadError = "Solo puede ser Alta/Media/Baja"
                                 }
                             }else{
                                 Toast.makeText(context, "Formato de Fecha incorrecto", Toast.LENGTH_SHORT).show()
+                                if (fechaEntrega.isNotEmpty()) fechaError = "Solo puede ser DD/MM/AA"
                             }
                         }else {
                             Toast.makeText(context, "Faltan campos por rellenar", Toast.LENGTH_SHORT).show()
+                            if (titulo.isEmpty()) tituloError = "Campo por llenar"
+                            if (fechaEntrega.isEmpty()) fechaError = "Campo por llenar"
+                            if (prioridad.isEmpty()) prioridadError = "Campo por llenar"
+                            if (descripcion.isEmpty()) descripcionError = "Campo por llenar"
                         }
                     },
                     modifier = Modifier.fillMaxWidth().padding(10.dp),

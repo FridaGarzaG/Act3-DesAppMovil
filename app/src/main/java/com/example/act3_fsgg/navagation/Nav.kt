@@ -15,7 +15,7 @@ fun AppNav(navController: NavHostController, viewModel: CardViewModel){
         startDestination = "pantalla1"
     ){
         composable("pantalla1"){ Listado(navController = navController, viewModel = viewModel) }
-        composable("pantalla2"){ CTareas(navController, viewModel) }
+        composable("pantalla2"){ CTareas(navController = navController, viewModel = viewModel) }
     }
 }
 
